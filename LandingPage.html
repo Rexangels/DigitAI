@@ -7,10 +7,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-white">
-  <!-- Header Section -->
-  <header class="bg-gradient-to-b from-zinc-900 to-black py-8">
-    <div class="container mx-auto flex items-center justify-between px-6">
-      <!-- Logo -->
+  <!-- Header -->
+  <header class="bg-gradient-to-b from-zinc-900 to-black py-6">
+    <div class="container mx-auto flex justify-between items-center px-6">
       <div class="flex items-center space-x-3">
         <svg viewBox="0 0 800 400" class="w-24 h-12">
           <defs>
@@ -39,11 +38,11 @@
         </svg>
         <span class="text-2xl font-bold">DigitAI</span>
       </div>
-      <!-- Navigation -->
       <nav class="space-x-6">
         <a href="#about" class="text-gray-400 hover:text-white">About</a>
         <a href="#features" class="text-gray-400 hover:text-white">Features</a>
         <a href="#platform" class="text-gray-400 hover:text-white">Platform</a>
+        <a href="#pricing" class="text-gray-400 hover:text-white">Pricing</a>
         <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
       </nav>
     </div>
@@ -52,15 +51,15 @@
   <!-- Hero Section -->
   <section class="py-20 text-center">
     <div class="container mx-auto px-6">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+      <h1 class="text-5xl font-bold mb-6">
         Innovating Tomorrow, Today
       </h1>
-      <p class="text-gray-400 max-w-2xl mx-auto mb-12">
-        DigitAI empowers businesses and individuals with cutting-edge artificial intelligence solutions. 
-        Explore our applications, transform your workflows, and redefine possibilities.
+      <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+        Empower your productivity with DigitAI, an adaptive AI platform that remembers and adapts to your needs.
+        Revolutionize how you work with personalized memory-based assistance.
       </p>
       <a 
-        href="#platform" 
+        href="index.html" 
         class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
       >
         Explore the Platform
@@ -68,37 +67,54 @@
     </div>
   </section>
 
+  <!-- Problems Section -->
+  <section id="about" class="bg-zinc-900 py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-center">The Problems We Solve</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">Lack of Continuity</h3>
+          <p class="text-gray-400">
+            Traditional AI assistants fail to provide consistent interactions across multiple tasks.
+          </p>
+        </div>
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">Fragmented Experiences</h3>
+          <p class="text-gray-400">
+            Switching between applications increases inefficiency and cognitive load for users.
+          </p>
+        </div>
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">High Cognitive Load</h3>
+          <p class="text-gray-400">
+            Professionals struggle to track schedules, tasks, and projects across platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Features Section -->
-  <section id="features" class="bg-zinc-900 py-16">
+  <section id="features" class="py-16">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold mb-8 text-center">Why Choose DigitAI?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-zinc-800 rounded-lg p-6 hover:bg-zinc-700 transition-colors">
-          <Search class="text-blue-500 w-8 h-8 mb-4" />
-          <h3 class="text-xl font-semibold mb-2">DIGIT Search</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-6 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition">
+          <h3 class="text-xl font-semibold mb-4">Memory-Based Assistance</h3>
           <p class="text-gray-400">
-            Advanced AI-powered search to bring insights at your fingertips.
+            DigitAI remembers past interactions to provide contextual recommendations.
           </p>
         </div>
-        <div class="bg-zinc-800 rounded-lg p-6 hover:bg-zinc-700 transition-colors">
-          <Store class="text-green-500 w-8 h-8 mb-4" />
-          <h3 class="text-xl font-semibold mb-2">App Store</h3>
+        <div class="p-6 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition">
+          <h3 class="text-xl font-semibold mb-4">Cross-Platform Continuity</h3>
           <p class="text-gray-400">
-            Access diverse applications to transform your workflows.
+            Seamless integration across calendars, notes, and reminders for consistent workflows.
           </p>
         </div>
-        <div class="bg-zinc-800 rounded-lg p-6 hover:bg-zinc-700 transition-colors">
-          <Palette class="text-purple-500 w-8 h-8 mb-4" />
-          <h3 class="text-xl font-semibold mb-2">Creative Studio</h3>
+        <div class="p-6 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition">
+          <h3 class="text-xl font-semibold mb-4">Adaptive Intelligence</h3>
           <p class="text-gray-400">
-            Enhance your creativity with AI-driven tools and resources.
-          </p>
-        </div>
-        <div class="bg-zinc-800 rounded-lg p-6 hover:bg-zinc-700 transition-colors">
-          <ShoppingBag class="text-yellow-500 w-8 h-8 mb-4" />
-          <h3 class="text-xl font-semibold mb-2">Marketplace</h3>
-          <p class="text-gray-400">
-            Buy and sell AI models, datasets, and APIs seamlessly.
+            Learns your habits over time to deliver personalized insights and productivity tools.
           </p>
         </div>
       </div>
@@ -106,11 +122,11 @@
   </section>
 
   <!-- Platform Section -->
-  <section id="platform" class="py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-8">Explore the DigitAI Platform</h2>
-      <p class="text-gray-400 max-w-xl mx-auto mb-12">
-        Dive into the full DigitAI experience. Interact with AI-powered applications, browse our app store, and revolutionize your workflows.
+  <section id="platform" class="py-20 bg-gradient-to-b from-zinc-900 to-black text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">Discover the Platform</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+        Explore how DigitAI transforms productivity with AI-powered applications designed for professionals and enterprises alike.
       </p>
       <a 
         href="index.html" 
@@ -121,11 +137,36 @@
     </div>
   </section>
 
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">Pricing Plans</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-bold mb-4">Free</h3>
+          <p class="text-gray-400 mb-4">Basic access with limited features.</p>
+          <p class="text-xl font-bold">$0 / month</p>
+        </div>
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-bold mb-4">Pro</h3>
+          <p class="text-gray-400 mb-4">Unlock advanced memory and cross-platform tools.</p>
+          <p class="text-xl font-bold">$19.99 / month</p>
+        </div>
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-bold mb-4">Enterprise</h3>
+          <p class="text-gray-400 mb-4">Custom solutions for organizations.</p>
+          <p class="text-xl font-bold">Contact Us</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="bg-zinc-900 py-8">
-    <div class="container mx-auto px-6 text-center">
+  <footer class="bg-zinc-900 py-6">
+    <div class="container mx-auto text-center">
       <p class="text-gray-400">
-        &copy; 2024 DigitAI. All rights reserved.
+        &copy; 2024 DigitAI. All rights reserved. 
+        <a href="#contact" class="text-blue-500 hover:underline">Contact Us</a>
       </p>
     </div>
   </footer>
