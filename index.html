@@ -3,119 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DigitAI Platform</title>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <title>DigitAI - Innovating Tomorrow</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="h-screen bg-black text-white flex">
-
-  <!-- Sidebar -->
-  <div class="w-64 bg-zinc-900 p-6 flex flex-col border-r border-zinc-800">
-    <div class="flex items-center justify-center mb-12">
-      <!-- DigitAI Logo -->
-      <svg viewBox="0 0 800 400" class="w-48 h-24">
-        <defs>
-          <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="black" stop-opacity="1"/>
-            <stop offset="100%" stop-color="black" stop-opacity="0.8"/>
-          </radialGradient>
-        </defs>
-        <g transform="translate(400, 180)">
-          <circle cx="0" cy="0" r="90" fill="white" stroke="black" stroke-width="2"/>
-          <path d="M-25 -45 L30 -45 Q55 -45 55 -15 L55 15 Q55 45 30 45 L-25 45"
-                fill="none" stroke="black" stroke-width="3.5" stroke-linecap="round"/>
-          <g>
-            <circle cx="-25" cy="-45" r="5" fill="url(#nodeGlow)"></circle>
-            <circle cx="30" cy="-45" r="5" fill="url(#nodeGlow)"></circle>
-            <circle cx="55" cy="0" r="5" fill="url(#nodeGlow)"></circle>
-            <circle cx="30" cy="45" r="5" fill="url(#nodeGlow)"></circle>
-            <circle cx="-25" cy="45" r="5" fill="url(#nodeGlow)"></circle>
+<body class="bg-black text-white">
+  <!-- Header -->
+  <header class="bg-gradient-to-b from-zinc-900 to-black py-6">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <div class="flex items-center space-x-3">
+        <svg viewBox="0 0 800 400" class="w-24 h-12">
+          <defs>
+            <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="black" stop-opacity="1" />
+              <stop offset="100%" stop-color="black" stop-opacity="0.8" />
+            </radialGradient>
+          </defs>
+          <g transform="translate(400, 180)">
+            <circle cx="0" cy="0" r="90" fill="white" stroke="black" stroke-width="2" />
+            <path
+              d="M-25 -45 L30 -45 Q55 -45 55 -15 L55 15 Q55 45 30 45 L-25 45"
+              fill="none"
+              stroke="black"
+              stroke-width="3.5"
+              stroke-linecap="round"
+            />
+            <g>
+              <circle cx="-25" cy="-45" r="5" fill="url(#nodeGlow)"></circle>
+              <circle cx="30" cy="-45" r="5" fill="url(#nodeGlow)"></circle>
+              <circle cx="55" cy="0" r="5" fill="url(#nodeGlow)"></circle>
+              <circle cx="30" cy="45" r="5" fill="url(#nodeGlow)"></circle>
+              <circle cx="-25" cy="45" r="5" fill="url(#nodeGlow)"></circle>
+            </g>
           </g>
-        </g>
-      </svg>
+        </svg>
+        <span class="text-2xl font-bold">DigitAI</span>
+      </div>
+      <nav class="space-x-6">
+        <a href="#about" class="text-gray-400 hover:text-white">About</a>
+        <a href="#features" class="text-gray-400 hover:text-white">Features</a>
+        <a href="#platform" class="text-gray-400 hover:text-white">Platform</a>
+        <a href="#pricing" class="text-gray-400 hover:text-white">Pricing</a>
+        <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Navigation -->
-    <nav class="flex-1 space-y-4">
-      <button class="tab-button flex items-center space-x-3 w-full p-2 rounded-lg transition-colors duration-300 text-gray-400 hover:bg-zinc-800"
-              data-tab="search">
-        <i data-lucide="search"></i>
-        <span>DIGIT Search</span>
-      </button>
-      <button class="tab-button flex items-center space-x-3 w-full p-2 rounded-lg transition-colors duration-300 text-gray-400 hover:bg-zinc-800"
-              data-tab="appStore">
-        <i data-lucide="store"></i>
-        <span>App Store</span>
-      </button>
-      <button class="tab-button flex items-center space-x-3 w-full p-2 rounded-lg transition-colors duration-300 text-gray-400 hover:bg-zinc-800"
-              data-tab="creativeStudio">
-        <i data-lucide="palette"></i>
-        <span>Creative Studio</span>
-      </button>
-      <button class="tab-button flex items-center space-x-3 w-full p-2 rounded-lg transition-colors duration-300 text-gray-400 hover:bg-zinc-800"
-              data-tab="marketplace">
-        <i data-lucide="shopping-bag"></i>
-        <span>Marketplace</span>
-      </button>
-    </nav>
-
-    <!-- Settings -->
-    <div class="pt-6 border-t border-zinc-800">
-      <button class="flex items-center space-x-3 text-gray-400 hover:bg-zinc-800 w-full p-2 rounded-lg">
-        <i data-lucide="settings"></i>
-        <span>Settings</span>
-      </button>
+  <!-- Hero Section -->
+  <section class="py-20 text-center">
+    <div class="container mx-auto px-6">
+      <h1 class="text-5xl font-bold mb-6">
+        Innovating Tomorrow, Today
+      </h1>
+      <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+        Empower your productivity with DigitAI, an adaptive AI platform that remembers and adapts to your needs.
+        Revolutionize how you work with personalized memory-based assistance.
+      </p>
+      <a 
+        href="index.html" 
+        class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+      >
+        Explore the Platform
+      </a>
     </div>
-  </div>
+  </section>
 
-  <!-- Main Content -->
-  <div class="flex-1 bg-gradient-to-b from-zinc-900 to-black p-8" id="main-content">
-    <div id="search" class="tab-content hidden">
-      <h2 class="text-4xl font-bold text-center mb-12">DIGIT Search</h2>
-      <input type="text" placeholder="What would you like to know?"
-             class="w-full bg-zinc-800 text-white rounded-lg px-6 py-4 text-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+  <!-- Problems Section -->
+  <section id="about" class="bg-zinc-900 py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-center">The Problems We Solve</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">Lack of Continuity</h3>
+          <p class="text-gray-400">
+            Traditional AI assistants fail to provide consistent interactions across multiple tasks.
+          </p>
+        </div>
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">Fragmented Experiences</h3>
+          <p class="text-gray-400">
+            Switching between applications increases inefficiency and cognitive load for users.
+          </p>
+        </div>
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">High Cognitive Load</h3>
+          <p class="text-gray-400">
+            Professionals struggle to track schedules, tasks, and projects across platforms.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div id="appStore" class="tab-content hidden">
-      <h2 class="text-3xl font-bold mb-8">App Store</h2>
-      <p>Applications list goes here...</p>
+  <!-- Features Section -->
+  <section id="features" class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-center">Why Choose DigitAI?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-6 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition">
+          <h3 class="text-xl font-semibold mb-4">Memory-Based Assistance</h3>
+          <p class="text-gray-400">
+            DigitAI remembers past interactions to provide contextual recommendations.
+          </p>
+        </div>
+        <div class="p-6 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition">
+          <h3 class="text-xl font-semibold mb-4">Cross-Platform Continuity</h3>
+          <p class="text-gray-400">
+            Seamless integration across calendars, notes, and reminders for consistent workflows.
+          </p>
+        </div>
+        <div class="p-6 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition">
+          <h3 class="text-xl font-semibold mb-4">Adaptive Intelligence</h3>
+          <p class="text-gray-400">
+            Learns your habits over time to deliver personalized insights and productivity tools.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div id="creativeStudio" class="tab-content hidden">
-      <h2 class="text-3xl font-bold mb-8">Creative Studio</h2>
-      <p>Studio tools go here...</p>
+  <!-- Platform Section -->
+  <section id="platform" class="py-20 bg-gradient-to-b from-zinc-900 to-black text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">Discover the Platform</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+        Explore how DigitAI transforms productivity with AI-powered applications designed for professionals and enterprises alike.
+      </p>
+      <a 
+        href="index.html" 
+        class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+      >
+        Visit the Platform
+      </a>
     </div>
+  </section>
 
-    <div id="marketplace" class="tab-content hidden">
-      <h2 class="text-3xl font-bold mb-8">Marketplace</h2>
-      <p>Marketplace items go here...</p>
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">Pricing Plans</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-bold mb-4">Free</h3>
+          <p class="text-gray-400 mb-4">Basic access with limited features.</p>
+          <p class="text-xl font-bold">$0 / month</p>
+        </div>
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-bold mb-4">Pro</h3>
+          <p class="text-gray-400 mb-4">Unlock advanced memory and cross-platform tools.</p>
+          <p class="text-xl font-bold">$19.99 / month</p>
+        </div>
+        <div class="p-6 bg-zinc-800 rounded-lg">
+          <h3 class="text-xl font-bold mb-4">Enterprise</h3>
+          <p class="text-gray-400 mb-4">Custom solutions for organizations.</p>
+          <p class="text-xl font-bold">Contact Us</p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- JavaScript -->
-  <script>
-    lucide.createIcons();
-    
-    // Tab functionality
-    const tabButtons = document.querySelectorAll(".tab-button");
-    const tabContents = document.querySelectorAll(".tab-content");
-
-    tabButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        tabButtons.forEach((btn) => btn.classList.remove("bg-blue-500"));
-        button.classList.add("bg-blue-500");
-        const tabId = button.getAttribute("data-tab");
-
-        tabContents.forEach((content) => {
-          content.classList.add("hidden");
-        });
-
-        document.getElementById(tabId).classList.remove("hidden");
-      });
-    });
-
-    // Show the default tab
-    document.querySelector(".tab-button").click();
-  </script>
+  <!-- Footer -->
+  <footer class="bg-zinc-900 py-6">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-400">
+        &copy; 2024 DigitAI. All rights reserved. 
+        <a href="#contact" class="text-blue-500 hover:underline">Contact Us</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
