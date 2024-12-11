@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigitAI - Innovating Tomorrow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+  <!-- Header Section -->
+  <header class="bg-gradient-to-b from-zinc-900 to-black py-8">
+    <div class="container mx-auto flex items-center justify-between px-6">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <svg viewBox="0 0 800 400" class="w-24 h-12">
+          <defs>
+            <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="black" stop-opacity="1" />
+              <stop offset="100%" stop-color="black" stop-opacity="0.8" />
+            </radialGradient>
+          </defs>
+          <g transform="translate(400, 180)">
+            <circle cx="0" cy="0" r="90" fill="white" stroke="black" stroke-width="2" />
+            <path
+              d="M-25 -45 L30 -45 Q55 -45 55 -15 L55 15 Q55 45 30 45 L-25 45"
+              fill="none"
+              stroke="black"
+              stroke-width="3.5"
+              stroke-linecap="round"
+            />
+            <g>
+              <circle cx="-25" cy="-45" r="5" fill="url(#nodeGlow)"></circle>
+              <circle cx="30" cy="-45" r="5" fill="url(#nodeGlow)"></circle>
+              <circle cx="55" cy="0" r="5" fill="url(#nodeGlow)"></circle>
+              <circle cx="30" cy="45" r="5" fill="url(#nodeGlow)"></circle>
+              <circle cx="-25" cy="45" r="5" fill="url(#nodeGlow)"></circle>
+            </g>
+          </g>
+        </svg>
+        <span class="text-2xl font-bold">DigitAI</span>
+      </div>
+      <!-- Navigation -->
+      <nav class="space-x-6">
+        <a href="#about" class="text-gray-400 hover:text-white">About</a>
+        <a href="#features" class="text-gray-400 hover:text-white">Features</a>
+        <a href="#platform" class="text-gray-400 hover:text-white">Platform</a>
+        <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-20 text-center">
+    <div class="container mx-auto px-6">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Innovating Tomorrow, Today
+      </h1>
+      <p class="text-gray-400 max-w-2xl mx-auto mb-12">
+        DigitAI empowers businesses and individuals with cutting-edge artificial intelligence solutions. 
+        Explore our applications, transform your workflows, and redefine possibilities.
+      </p>
+      <a 
+        href="#platform" 
+        class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+      >
+        Explore the Platform
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="bg-zinc-900 py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-center">Why Choose DigitAI?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-zinc-800 rounded-lg p-6 hover:bg-zinc-700 transition-colors">
+          <Search class="text-blue-500 w-8 h-8 mb-4" />
+          <h3 class="text-xl font-semibold mb-2">DIGIT Search</h3>
+          <p class="text-gray-400">
+            Advanced AI-powered search to bring insights at your fingertips.
+          </p>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 hover:bg-zinc-700 transition-colors">
+          <Store class="text-green-500 w-8 h-8 mb-4" />
+          <h3 class="text-xl font-semibold mb-2">App Store</h3>
+          <p class="text-gray-400">
+            Access diverse applications to transform your workflows.
+          </p>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 hover:bg-zinc-700 transition-colors">
+          <Palette class="text-purple-500 w-8 h-8 mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Creative Studio</h3>
+          <p class="text-gray-400">
+            Enhance your creativity with AI-driven tools and resources.
+          </p>
+        </div>
+        <div class="bg-zinc-800 rounded-lg p-6 hover:bg-zinc-700 transition-colors">
+          <ShoppingBag class="text-yellow-500 w-8 h-8 mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Marketplace</h3>
+          <p class="text-gray-400">
+            Buy and sell AI models, datasets, and APIs seamlessly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Section -->
+  <section id="platform" class="py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">Explore the DigitAI Platform</h2>
+      <p class="text-gray-400 max-w-xl mx-auto mb-12">
+        Dive into the full DigitAI experience. Interact with AI-powered applications, browse our app store, and revolutionize your workflows.
+      </p>
+      <a 
+        href="index.html" 
+        class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+      >
+        Visit the Platform
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-900 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-gray-400">
+        &copy; 2024 DigitAI. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

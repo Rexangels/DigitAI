@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigitAI Platform</title>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-black text-white flex">
+
+  <!-- Sidebar -->
+  <div class="w-64 bg-zinc-900 p-6 flex flex-col border-r border-zinc-800">
+    <div class="flex items-center justify-center mb-12">
+      <!-- DigitAI Logo -->
+      <svg viewBox="0 0 800 400" class="w-48 h-24">
+        <defs>
+          <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="black" stop-opacity="1"/>
+            <stop offset="100%" stop-color="black" stop-opacity="0.8"/>
+          </radialGradient>
+        </defs>
+        <g transform="translate(400, 180)">
+          <circle cx="0" cy="0" r="90" fill="white" stroke="black" stroke-width="2"/>
+          <path d="M-25 -45 L30 -45 Q55 -45 55 -15 L55 15 Q55 45 30 45 L-25 45"
+                fill="none" stroke="black" stroke-width="3.5" stroke-linecap="round"/>
+          <g>
+            <circle cx="-25" cy="-45" r="5" fill="url(#nodeGlow)"></circle>
+            <circle cx="30" cy="-45" r="5" fill="url(#nodeGlow)"></circle>
+            <circle cx="55" cy="0" r="5" fill="url(#nodeGlow)"></circle>
+            <circle cx="30" cy="45" r="5" fill="url(#nodeGlow)"></circle>
+            <circle cx="-25" cy="45" r="5" fill="url(#nodeGlow)"></circle>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="flex-1 space-y-4">
+      <button class="tab-button flex items-center space-x-3 w-full p-2 rounded-lg transition-colors duration-300 text-gray-400 hover:bg-zinc-800"
+              data-tab="search">
+        <i data-lucide="search"></i>
+        <span>DIGIT Search</span>
+      </button>
+      <button class="tab-button flex items-center space-x-3 w-full p-2 rounded-lg transition-colors duration-300 text-gray-400 hover:bg-zinc-800"
+              data-tab="appStore">
+        <i data-lucide="store"></i>
+        <span>App Store</span>
+      </button>
+      <button class="tab-button flex items-center space-x-3 w-full p-2 rounded-lg transition-colors duration-300 text-gray-400 hover:bg-zinc-800"
+              data-tab="creativeStudio">
+        <i data-lucide="palette"></i>
+        <span>Creative Studio</span>
+      </button>
+      <button class="tab-button flex items-center space-x-3 w-full p-2 rounded-lg transition-colors duration-300 text-gray-400 hover:bg-zinc-800"
+              data-tab="marketplace">
+        <i data-lucide="shopping-bag"></i>
+        <span>Marketplace</span>
+      </button>
+    </nav>
+
+    <!-- Settings -->
+    <div class="pt-6 border-t border-zinc-800">
+      <button class="flex items-center space-x-3 text-gray-400 hover:bg-zinc-800 w-full p-2 rounded-lg">
+        <i data-lucide="settings"></i>
+        <span>Settings</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 bg-gradient-to-b from-zinc-900 to-black p-8" id="main-content">
+    <div id="search" class="tab-content hidden">
+      <h2 class="text-4xl font-bold text-center mb-12">DIGIT Search</h2>
+      <input type="text" placeholder="What would you like to know?"
+             class="w-full bg-zinc-800 text-white rounded-lg px-6 py-4 text-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <div id="appStore" class="tab-content hidden">
+      <h2 class="text-3xl font-bold mb-8">App Store</h2>
+      <p>Applications list goes here...</p>
+    </div>
+
+    <div id="creativeStudio" class="tab-content hidden">
+      <h2 class="text-3xl font-bold mb-8">Creative Studio</h2>
+      <p>Studio tools go here...</p>
+    </div>
+
+    <div id="marketplace" class="tab-content hidden">
+      <h2 class="text-3xl font-bold mb-8">Marketplace</h2>
+      <p>Marketplace items go here...</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    lucide.createIcons();
+    
+    // Tab functionality
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        tabButtons.forEach((btn) => btn.classList.remove("bg-blue-500"));
+        button.classList.add("bg-blue-500");
+        const tabId = button.getAttribute("data-tab");
+
+        tabContents.forEach((content) => {
+          content.classList.add("hidden");
+        });
+
+        document.getElementById(tabId).classList.remove("hidden");
+      });
+    });
+
+    // Show the default tab
+    document.querySelector(".tab-button").click();
+  </script>
+</body>
+</html>
